@@ -50,3 +50,4 @@ end
 
 gem 'mongoid'
 gem 'nokogiri'
+gem 'puma'
