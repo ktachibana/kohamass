@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kohamass</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+  <h1>小浜池の水位</h1>
+  <table class="table table-striped">
+    <% @water_levels.each do |level| %>
+        <tr>
+          <td><%= level.day %></td>
+          <td><%= level.value %>cm</td>
+        </tr>
+    <% end %>
+  </table>
+</div>
+
+</body>
+</html>
