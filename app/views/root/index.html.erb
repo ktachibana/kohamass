@@ -1,9 +1,0 @@
-<h1>小浜池の水位</h1>
-<table class="table table-striped">
-  <% @water_levels.each do |level| %>
-    <tr>
-      <td><%= l level.day %></td>
-      <td><%= level.value %>cm</td>
-    </tr>
-  <% end %>
-</table>
