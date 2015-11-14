@@ -6,7 +6,7 @@ get '/' do
   erb :index
 end
 
-get '/feed.atom' do
+get '/feed.rss' do
   @water_levels = WaterLevel.desc(:day).limit(20)
   content_type :atom
   @water_levels.to_atom
