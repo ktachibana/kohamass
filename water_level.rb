@@ -2,6 +2,7 @@ require 'open-uri'
 
 class WaterLevel
   include Mongoid::Document
+  include Mongoid::Timestamps
   field :day, type: Date
   field :value, type: Integer
 
@@ -25,5 +26,29 @@ class WaterLevel
       end
     end.compact
     levels.each(&:save)
+  end
+
+  HOME_LINK = 'https://www.city.mishima.shizuoka.jp/rakujyu/'
+  LINK = 'https://www.city.mishima.shizuoka.jp/rakujyu/kohamaike_current.html'
+
+  def self.to_atom
+    RSS::Maker.make('2.0') do |a|
+      a.channel.tap do |c|
+        c.id = 'tag:kohamass.herokuapp.com'
+        c.author = 'Kenichi Tachibana'
+        c.title = '小浜池の水位 - kohamass'
+        c.link = HOME_LINK
+        c.updated = max(:updated_at) || Time.current
+        c.description = '「小浜池」の水位は標高25.69ｍ（池中央付近の池底部分）を０ｃｍとし、毎日計測しています。'
+      end
+      each do |level|
+        a.items.new_item do |i|
+          i.link = LINK
+          i.title = level.day.to_s
+          i.description = "#{level.value} cm"
+          i.updated = level.updated_at || level.day
+        end
+      end
+    end.to_s
   end
 end
