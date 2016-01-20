@@ -21,7 +21,7 @@ class WaterLevel
 
       day = cell_texts[0].match(/(\d+)日/).try { |match| match[1].to_i } || next
       value = cell_texts[1].match(/\-?\d+/).try { |match| match[0].to_i } || next
-      find_or_initialize_by(day: Date.new(year, month, day)) do |level|
+      find_or_initialize_by(day: Date.new(year, month, day)).tap do |level|
         level.value = value
       end
     end.compact
