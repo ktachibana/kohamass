@@ -9,4 +9,4 @@ gem 'mongoid'
 gem 'nokogiri'
 gem 'puma'
 gem 'rake'
-gem 'mongo', '~> 2.5.3'
+gem 'mongo', '~> 2.5.3' # mLabがまだv4系になってないので最新だと動かないっぽい
