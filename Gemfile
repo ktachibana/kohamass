@@ -8,5 +8,5 @@ gem 'builder'
 gem 'mongoid'
 gem 'nokogiri'
 gem 'puma'
-gem 'rake'
+gem 'rake', '>= 12.3.3'
 gem 'mongo', '~> 2.5.3' # mLabがまだv4系になってないので最新だと動かないっぽい
