@@ -5,7 +5,7 @@ ruby '2.6.3'
 gem 'sinatra', require: false
 gem 'tilt'
 gem 'builder'
-gem 'mongoid'
+gem 'mongoid', '>= 7.0.4'
 gem 'nokogiri'
 gem 'puma'
 gem 'rake'
