@@ -20,23 +20,25 @@ GEM
     mongoid (7.0.4)
       activemodel (>= 5.1, < 6.0.0)
       mongo (>= 2.5.1, < 3.0.0)
-    mustermann (1.0.3)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
     nio4r (2.4.0)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     puma (4.0.1)
       nio4r (~> 2.0)
-    rack (2.0.7)
-    rack-protection (2.0.5)
+    rack (2.2.3)
+    rack-protection (2.0.8.1)
       rack
     rake (12.3.2)
-    sinatra (2.0.5)
+    ruby2_keywords (0.0.2)
+    sinatra (2.0.8.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.5)
+      rack-protection (= 2.0.8.1)
       tilt (~> 2.0)
     thread_safe (0.3.6)
-    tilt (2.0.9)
+    tilt (2.0.10)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
 
@@ -50,11 +52,11 @@ DEPENDENCIES
   nokogiri
   puma
   rake
-  sinatra
+  sinatra (>= 2.0.5)
   tilt
 
 RUBY VERSION
    ruby 2.6.3p62
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
