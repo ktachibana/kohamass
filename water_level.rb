@@ -9,7 +9,7 @@ class WaterLevel
   URL = 'https://www.city.mishima.shizuoka.jp/rakujyu/kohamaike_current.html'
 
   def self.load!
-    doc = Nokogiri::HTML(open(URL))
+    doc = Nokogiri::HTML(URI.open(URL))
 
     year = Date.current.year
     content_elm = doc.css('#maincontent')
