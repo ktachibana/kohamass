@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.6.3'
+ruby File.read(__dir__ + '/.ruby-version').strip
 
 gem 'sinatra', require: false
 gem 'tilt'
