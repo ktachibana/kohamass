@@ -14,10 +14,18 @@
     <a class="btn btn-default btn-xs" href="/feed.xml">Atom</a>
   </h1>
   <table class="table table-striped">
+    <tr>
+      <th>日</th>
+      <th>水位</th>
+      <th>created_at</th>
+      <th>updated_at</th>
+    </tr>
     <% @water_levels.each do |level| %>
         <tr>
           <td><%= level.day %></td>
           <td><%= level.value %>cm</td>
+          <td><%= level.created_at %></td>
+          <td><%= level.updated_at %></td>
         </tr>
     <% end %>
   </table>
