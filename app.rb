@@ -1,5 +1,4 @@
 require './env'
-require 'rss'
 
 get '/' do
   @water_levels = WaterLevel.desc(:day)
