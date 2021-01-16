@@ -10,3 +10,7 @@ gem 'nokogiri'
 gem 'puma'
 gem 'rake'
 gem 'mongo'
+
+group :test do
+  gem 'rspec'
+end
