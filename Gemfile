@@ -10,7 +10,7 @@ gem 'nokogiri'
 gem 'puma'
 gem 'rake'
 gem 'mongo'
-gem 'rss'
+gem 'rss', '>= 0.2.9'
 
 group :test do
   gem 'rspec'
