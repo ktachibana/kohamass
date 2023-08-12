@@ -35,7 +35,7 @@ GEM
     rack-protection (2.1.0)
       rack
     rake (13.0.3)
-    rexml (3.2.4)
+    rexml (3.2.6)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -49,7 +49,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.1)
-    rss (0.2.9)
+    rss (0.3.0)
       rexml
     ruby2_keywords (0.0.2)
     sinatra (2.1.0)
@@ -74,12 +74,12 @@ DEPENDENCIES
   puma
   rake
   rspec
-  rss
+  rss (>= 0.3.0)
   sinatra
   tilt
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 2.7.8p225
 
 BUNDLED WITH
-   2.2.3
+   2.1.4
