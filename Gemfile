@@ -6,7 +6,7 @@ gem 'sinatra', require: false
 gem 'tilt'
 gem 'builder'
 gem 'mongoid'
-gem 'nokogiri'
+gem 'nokogiri', '>= 1.16.5'
 gem 'puma'
 gem 'rake'
 gem 'mongo'
