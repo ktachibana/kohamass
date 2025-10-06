@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby File.read(__dir__ + '/.ruby-version').strip
 
-gem 'sinatra', require: false
+gem 'sinatra', '>= 2.2.0', require: false
 gem 'tilt'
 gem 'builder'
 gem 'mongoid'
